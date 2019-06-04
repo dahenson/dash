@@ -38,7 +38,7 @@
 
     - shell: /usr/bin/lsb_release -cus
       register: release_ver
-      when: ansible_distribution == 'Ubuntu'
+      when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'elementary OS'
 
     - set_fact: release_version="{{release_ver}}"
       when: release_ver.changed
@@ -53,7 +53,7 @@
       apt_repository:
         repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ release_version.stdout }} stable
       become: yes
-      when: ansible_distribution == 'Ubuntu'
+      when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'elementary OS'
 
     - name: Install docker
       apt:
