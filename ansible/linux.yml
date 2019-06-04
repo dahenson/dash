@@ -81,6 +81,14 @@
         checksum: sha256:bee6460f96339d5d978bb63d17943f773e1a140242dfa6c941d5e020a302c91b
       become: yes
 
+    - name: Download docker-machine
+      get_url:
+        url: https://github.com/docker/machine/releases/download/v0.16.1/docker-machine-Linux-x86_64
+        dest: /usr/local/bin/docker-machine
+        mode: 0755
+        checksum: sha256:44a008c14549156222b314b1448c22ef255b446419fcf96570f3f288dff318a9
+      become: yes
+
     - name: Install ruby
       apt:
         name: "{{ packages }}"
