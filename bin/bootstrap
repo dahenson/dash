@@ -76,7 +76,7 @@ mac_install () {
     echo 'Checking out Dash repo...'
     sudo mkdir /usr/local/dev-env
     sudo chown ${USER}:admin /usr/local/dev-env
-    git clone https://github.com/outstand/dash.git /usr/local/dev-env 2>/dev/null
+    git clone https://github.com/dahenson/dash.git /usr/local/dev-env 2>/dev/null
   fi
 }
 
@@ -104,7 +104,7 @@ linux_install () {
     echo 'Checking out Dash repo...'
     sudo mkdir /usr/local/dev-env
     sudo chown ${USER}:${USER} /usr/local/dev-env
-    git clone https://github.com/outstand/dash.git /usr/local/dev-env 2>/dev/null
+    git clone https://github.com/dahenson/dash.git /usr/local/dev-env 2>/dev/null
   fi
 }
 
