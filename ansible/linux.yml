@@ -102,7 +102,7 @@
     - name: Install dory
       bundler:
         chdir: "{{ dev_env_dir }}/ansible"
-        binstub_directory: /usr/bin
+        binstub_directory: /usr/local/bin
         user_install: no
       become: yes
 
